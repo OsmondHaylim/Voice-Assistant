@@ -83,8 +83,11 @@ def main():
         elif 'wikipedia' in q:
             q = q.replace('wikipedia','')
             speak(f'checking wikipedia for {q}')
-            result = wikipedia.summary(q, sentences=2)
-            speak(result)
+            try:
+                result = wikipedia.summary(q, sentences=2)
+                speak(result)
+            except:
+                speak(f'Sorry, I cannot find {q}')
             continue
         elif 'search web' in q:
             q = q.replace('search web','')
