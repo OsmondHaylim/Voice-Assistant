@@ -46,7 +46,7 @@ def query_time():
     hour = datetime.datetime.now().hour
     minute = datetime.datetime.now().minute
     if hour == 0:
-        speak(f'It is twelve {minute} A M')
+        speak(f'It is 12 {minute} A M')
     elif hour >= 12:
         speak(f'It is {hour-12} {minute} P M')
     else:
